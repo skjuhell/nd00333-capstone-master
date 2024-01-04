@@ -17,7 +17,9 @@
  - [Standout Suggestions](##standout)
 
 ## Problem Statement <a name="problem"></a>
-In this project we will consider a regression problem, i.e. a process where a model learns to predict a continuous value output for a given input data. We first apply AutoML where multiple models are trained to fit the training data. We then choose and save the best model, that is, the model with the best score. Secondly, we build a simple neural network consisting of two hidden layers. In particular, a keras model where we tune hyperparameters using HyperDrive.  
+In this project, our primary objective is to address a regression problem—a scenario where a model is designed to learn and predict a continuous numerical output in response to input data. We commence by employing AutoML, wherein multiple models undergo training to ascertain their efficacy in fitting the provided training data. The model exhibiting the highest performance score is then selected and preserved as the optimal choice.
+
+Following this, we delve into the construction of a neural network featuring two hidden layers. This neural network is implemented using the Keras framework, and the hyperparameters are fine-tuned using HyperDrive to optimize its predictive capabilities.
 
 
 ## Dataset  <a name="dataset"></a>
@@ -31,14 +33,7 @@ We download the *housing.csv* from kaggle localy and upload the csv file to the 
 
 ## General Set Up <a name="setup"></a>
 Before we either apply Automated ML or tune hyperparamteres for a keras model, the following steps are required:
-- Import all needed dependencies
-- Set up a Workspace and initialize an experiment
-- Create or attach a compute resource (VM with cpu for automated ML and VM with gpu for hyperdrive)
-- Load csv file and either register data set in the *Dataset* section or read directly to the notebook
-- Initialize AutoMLConfig / HyperDriveConfig object
-- Submit experiment 
-- Save best model
-- Deploy and consume best model (either for the automated ML or hyperdrive run)
+For this project, the initial steps involve importing all the necessary dependencies and setting up a Workspace while initializing an experiment. To optimize computational resources, it's crucial to create or attach specific compute resources—employing a VM with a CPU for automated ML and HyperDrive. Data preparation includes loading the CSV file, with the option to either register the dataset in the Dataset section or read it directly into the notebook. Subsequently, one must initialize the AutoMLConfig/HyperDriveConfig object, submit the experiment for processing, and save the best model acquired during the experiment. The final stages revolve around deploying and consuming the best model, whether it stems from the automated ML or HyperDrive run. This comprehensive approach ensures a systematic and efficient workflow throughout the project.
 
 
 ## Automated ML <a name="automl"></a>
