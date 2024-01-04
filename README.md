@@ -119,7 +119,9 @@ To initialize a HyperDriveConfig we first need to define the search space
 ps = RandomParameterSampling(
     {
         '--first-layer-neurons': choice(range(4,24,4)),
-        '--second-layer-neurons': choice(range(4,24,4))
+        '--second-layer-neurons': choice(range(4,24,4)),
+        '--batch_size: 15,
+        '--epochs: 100
     }
 )
 ```
