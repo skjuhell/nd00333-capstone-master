@@ -118,14 +118,16 @@ To initialize a HyperDriveConfig we first need to define the search space
 ```
 ps = RandomParameterSampling(
     {
-        '--first-layer-neurons': choice(range(4,24,4)),
-        '--second-layer-neurons': choice(range(4,24,4)),
-        '--batch_size: 15,
+        '--first-layer-neurons': choice(range(10,51,10)),
+        '--second-layer-neurons': choice(range(10,51,10)),
+        '--batch_size: 12,
         '--epochs: 100
     }
 )
 ```
 Fine-tuning the number of nodes in hidden layers through hyperparameter optimization is crucial for finding the right balance between model complexity and efficiency in a neural network. This process systematically explores different configurations to improve overall model performance by addressing issues like underfitting or overfitting. By optimizing the number of nodes, we not only enhance computational efficiency but also enable the model to generalize well to diverse datasets and specific problem domains. Utilizing a smaller number of neurons helps achieve a favorable trade-off between training complexity and speed, ensuring the neural network is well-suited for the given task, resulting in a more effective model.
+
+We chose the range of 10 to 50 neurons, since we assume a neural network with 50 neurons in both layers to be able to capture the inherent complexity. However, also smaller architectures may be more efficient given the limited data. This is what we would like to find out in the hyperparameter search.
 
 - Early termination policy: BanditPolicy ensuring that computational resources are used efficiently by terminating runs that are not likely to lead to substantial improvements in the model's performance.
 ```
