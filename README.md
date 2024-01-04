@@ -75,7 +75,7 @@ For a complete code overview, we refer to the jypter notebook *automl.ipynb*.
 
 ### Results <a name="automl_result"></a>
 The best model from the automated ML run is *Voting Ensemble* displayed below
-![rund_detail1](https://github.com/skjuhell/nd00333-capstone-master/blob/main/screenshots/automl_widget.png)
+![rund_detail1](https://github.com/skjuhell/nd00333-capstone-master/blob/main/screenshots/best_model_automl.png)
 
 We can obtain the MAE from the model by calling 
  ```
